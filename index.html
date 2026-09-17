@@ -6,74 +6,169 @@
            <link rel="stylesheet" href="https://use.typekit.net/gnh8lna.css">
          <style>
              body {
-    background-color: #b2cae9;
+                 background-color: #b2cae9;
+                 background-color: #b2cae9;
+                color: white;
 }
              h1 {
                 font-family: forager, sans-serif;
                  font-style: normal;
                     font-weight: 700;
+                    font-size: 75px;
                 }
+             .small-banner {
+        width: 100%;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    .scrolling-text {
+        display: flex;
+        width: max-content;
+        animation: scroll 15s linear infinite;
+    }
+              .scrolling-text span {
+        font-family: forager, sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 25px;
+        color: white;
+        flex-shrink: 0;
+    }
+
+    @keyframes scroll {
+        from {
+            transform: translateX(0);
+        }
+        to {
+            transform: translateX(-50%);
+        }
+    }
             .album-covers {
-                   display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    width: 100%;
-                gap: 20px;
+                   display: flex;
+                    width: 100%;
+                    gap: 30px;
+                    margin-top: 60px;
+                    overflow-x: hidden;
+                scroll-behavior: smooth;
             }
 
-            album {
+            .album {
                 text-align: center;
+                flex-shrink: 0;
             }
 
            .album img {
-            width: 250px;
-            height: 250px;
+            width: 500px;
+            height: 500px;
             object-fit: cover;
-
+             }
             .album p {
                 margin-top: 8px;
             }
             .text-container {
-                background-color: #F5F0E8;
-                padding: 40px;
-                margin: 50px auto;
+                margin: 60px 0;
                 max-width: 1000px;
             }
+             .album-section {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.album-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 60px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.album-arrow.left {
+    left: 10px;
+}
+
+.album-arrow.right {
+    right: 10px;
+}
         </style>
     </head>
-    <body></body>
-</html>
-<div class= "small-banner">
-     <p> Favorite Albums </p>
+    <body>
+<div class="small-banner">
+    <div class="scrolling-text">
+
+        <span>
+            MY FAVORITE ALBUMS &nbsp;&nbsp;&nbsp; • &nbsp;&nbsp;&nbsp;
+            MY FAVORITE ALBUMS &nbsp;&nbsp;&nbsp; • &nbsp;&nbsp;&nbsp;
+            MY FAVORITE ALBUMS &nbsp;&nbsp;&nbsp; • &nbsp;&nbsp;&nbsp;
+            MY FAVORITE ALBUMS &nbsp;&nbsp;&nbsp; • &nbsp;&nbsp;&nbsp;
+        </span>
+
+        <span>
+            MY FAVORITE ALBUMS &nbsp;&nbsp;&nbsp; • &nbsp;&nbsp;&nbsp;
+            MY FAVORITE ALBUMS &nbsp;&nbsp;&nbsp; • &nbsp;&nbsp;&nbsp;
+            MY FAVORITE ALBUMS &nbsp;&nbsp;&nbsp; • &nbsp;&nbsp;&nbsp;
+            MY FAVORITE ALBUMS &nbsp;&nbsp;&nbsp; • &nbsp;&nbsp;&nbsp;
+        </span>
+
+    </div>
 </div>
 <section id="album-list"></section>
-<div class="album-covers">
+<div class="album-section">
+
+    <button class="album-arrow left" onclick="scrollAlbums(-1)">‹</button>
+    <div class="album-covers">
 
     <div class="album">
         <img src="Titanic_Rising.jpg">
-        <p>Titanic Rising</p>
+        <p>Titanic Rising, Weyes Blood</p>
     </div>
 
     <div class="album">
         <img src="PB_Punisher.png">
-        <p>Punisher</p>
+        <p>Punisher, Phoebe Bridgers</p>
     </div>
 
     <div class="album">
         <img src="StageGirl.jpeg">
-        <p>Stage Girl</p>
+        <p>Stage Girl, Eli</p>
     </div>
 
     <div class="album">
         <img src="ScottJames.jpg">
-        <p>Shelter Island Heights</p>
+        <p>Shelter Island Heights, Scott James</p>
     </div>
-
+<div class="album"> 
+    <img src="Igor_-_Tyler,_the_Creator.jpg">
+    <p>IGOR, Tyler, The Creator</p> 
+    </div>
+</div>
+         <button class="album-arrow right" onclick="scrollAlbums(1)">›</button>
 </div>
         <div class="text-container">
-<div class= "big-header">
-</div>
-<h1>My Favorite Albums</h1>
+<h1>MY FAVORITE ALBUMS</h1>
 <div class= "description">
 </div>
-<p>I have no specific ranking of these albums, these are just some I like! I listen to all different kinds of genres, so here is my list: Titanic Rising by Weyes Blood, Punisher by Phoebe Bridgers, Stage Girl by Eli, and Shelter Island Heights by Scott James.</p>
-</div>
+    </div>
+<p>I have no specific ranking of these albums, these are just some I like! I listen to all different kinds of genres, so here is my list: Titanic Rising by Weyes Blood, Punisher by Phoebe Bridgers, Stage Girl by Eli, and Shelter Island Heights by Scott James.
+        </p>
+
+    <script>
+function scrollAlbums(direction) {
+    const albums = document.querySelector('.album-covers');
+
+    albums.scrollBy({
+        left: direction * 530,
+        behavior: 'smooth'
+    });
+}
+</script>
+    
+</body>
+</html>

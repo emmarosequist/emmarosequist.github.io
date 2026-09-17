@@ -9,12 +9,20 @@
                  background-color: #b2cae9;
                  background-color: #b2cae9;
                 color: white;
+                 font-family: "pacaembu", sans-serif;
+                font-weight: 300;
+                 font-style: normal;
+                  font-size: 22px;
+                line-height: 1.5;
+                margin: 0;
+                padding: 0 40 px;
 }
              h1 {
                 font-family: forager, sans-serif;
                  font-style: normal;
                     font-weight: 700;
-                    font-size: 75px;
+                    font-size: 120px;
+                    line-height: 1;
                 }
              .small-banner {
         width: 100%;
@@ -49,6 +57,7 @@
                     width: 100%;
                     gap: 30px;
                     margin-top: 60px;
+                    margin-left: 40px;
                     overflow-x: hidden;
                 scroll-behavior: smooth;
             }
@@ -67,14 +76,20 @@
                 margin-top: 8px;
             }
             .text-container {
-                margin: 60px 0;
+                margin: 60px 0 60px 40px;
                 max-width: 1000px;
             }
+             .text-container + p {
+                 margin-left: 40px;
+                 max-width: 1000px;
+                 font-size: 22px;
+                 line-height: 1.6;
+            }
              .album-section {
-    position: relative;
-    width: 100%;
-    display: flex;
-    align-items: center;
+                position: relative;
+                width: 100%;
+                display: flex;
+                align-items: center;
 }
 
 .album-arrow {
@@ -148,17 +163,37 @@
     <img src="Igor_-_Tyler,_the_Creator.jpg">
     <p>IGOR, Tyler, The Creator</p> 
     </div>
+        <div class="album">
+            <img src="elmiene.jpeg">
+            <p>Sounds For Someone, Elmiene</p>
+        </div>
+        <div class="album">
+        <img src="twen_oss.jpg">
+            <p>One Stop Shop, Twen</p>
+             </div>
 </div>
          <button class="album-arrow right" onclick="scrollAlbums(1)">›</button>
 </div>
         <div class="text-container">
-<h1>MY FAVORITE ALBUMS</h1>
+<div class="text-section">
+        </div>
+<h1>GOOD SOUNDS!</h1>
 <div class= "description">
 </div>
-    </div>
-<p>I have no specific ranking of these albums, these are just some I like! I listen to all different kinds of genres, so here is my list: Titanic Rising by Weyes Blood, Punisher by Phoebe Bridgers, Stage Girl by Eli, and Shelter Island Heights by Scott James.
+<p>As someone who grew up exposed to music through playing multiple instruments, singing, and having musical family members, I've always been surrounded by music. It's been an outlet for me to de-stress through picking up a guitar to putting a playlist on shuffle. I have no specific ranking of these albums, these are just some I like! I listen to all different kinds of genres so a lot of these artists are scattered all over the place. Some of them I've seen live, some of them I haven't, but they're all great artists!
+            </p>
+        </div>
+        <div class="photo-box">
+        <img src="heatthestreets.jpeg">
+
+        <p class="caption">
+            Emma's Song of the Summer
         </p>
 
+        <p class="photo-text">
+            "Miss Hot July," Elmiene
+        </p>
+    </div>
     <script>
 function scrollAlbums(direction) {
     const albums = document.querySelector('.album-covers');

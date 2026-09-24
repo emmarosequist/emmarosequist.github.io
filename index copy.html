@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Title</title>
+           <link rel="stylesheet" href="https://use.typekit.net/gnh8lna.css">
+<style>
+             body {
+                 background: linear-gradient(
+                        to bottom,
+                        #e7a98f 0%,
+                        #d9a9c5 30%,
+                        #c8b9e5 60%,
+                        #b2cae9 82%;
+                        );
+                    background-attachment: scroll;
+                    background-size: 100% 100%;
+                color: white;
+                 font-family: "pacaembu", sans-serif;
+                font-weight: 300;
+                 font-style: normal;
+                  font-size: 22px;
+                line-height: 1.5;
+                margin: 0;
+                padding: 0 40 px;
+}
+             h1 {
+                font-family: forager, sans-serif;
+                 font-style: normal;
+                    font-weight: 700;
+                    font-size: 120px;
+                    line-height: 1;
+                }
+             .small-banner {
+        width: 100%;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    .scrolling-text {
+        display: flex;
+        width: max-content;
+        animation: scroll 15s linear infinite;
+    }
+              .scrolling-text span {
+        font-family: forager, sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 25px;
+        color: white;
+        flex-shrink: 0;
+    }
+
+    @keyframes scroll {
+        from {
+            transform: translateX(0);
+        }
+        to {
+            transform: translateX(-50%);
+        }
+    }
+            .album-covers {
+                   display: flex;
+                    width: 100%;
+                    gap: 30px;
+                    margin-top: 60px;
+                    margin-left: 40px;
+                    overflow-x: hidden;
+                scroll-behavior: smooth;
+            }
+
+            .album {
+                text-align: center;
+                flex-shrink: 0;
+            }
+
+           .album img {
+            width: 500px;
+            height: 500px;
+            object-fit: cover;
+             }
+            .album p {
+                margin-top: 8px;
+            }
+            .text-container {
+                margin: 60px 0 60px 40px;
+                max-width: 1000px;
+            }
+             .text-container + p {
+                 margin-left: 40px;
+                 max-width: 1000px;
+                 font-size: 22px;
+                 line-height: 1.6;
+            }
+             .album-section {
+                position: relative;
+                width: 100%;
+                display: flex;
+                align-items: center;
+}
+
+.album-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 60px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.album-arrow.left {
+    left: 10px;
+}
+
+.album-arrow.right {
+    right: 10px;
+}
+             
+             
+             .description {
+                 display:flex;
+                 width:85vw;
+                 margin: 4em auto;
+             }
+             .text {
+                 margin-right:2em;
+                 flex:1;
+             }
+             .image-feature {
+                 flex-basis:30%;
+                 background-color: white;
+                 padding:1em;
+                 color:black;
+             }
+             .image-feature img {
+                 width:100%;
+             }
+            .next-thing {
+                background: transparent;
+                padding: 4em 0;
+                color: white;
+                }
+
+           .sound-wave {
+    width: 100vw;
+    height: 300px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+
+.bar {
+    flex: 1 1 0;
+    min-width: 4px;
+    height: 40px;
+
+    background: rgba(255, 255, 255, 0.65);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+
+    box-shadow:
+        0 0 10px rgba(255, 255, 255, 0.3),
+        inset 0 0 6px rgba(255, 255, 255, 0.4);
+
+    transition: height 0.35s ease-out;
+}
+             body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: -1;
+            opacity: 0.12;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='.5'/%3E%3C/svg%3E");
+            }
+    .listen-button {
+    display: inline-block;
+    margin-top: 15px;
+
+    font-family: forager, sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    color: white;
+    text-decoration: none;
+
+    border: 1.5px solid white;
+    padding: 8px 18px;
+    border-radius: 50px;
+
+    transition: all 0.3s ease;
+}
+
+.listen-button:hover {
+    background: white;
+    color: #b2cae9;
+}
+        </style>
+    </head>
+    <body>
+<div class="small-banner">
+    <div class="scrolling-text">
+
+        <span>
+            MY FAVORITE ALBUMS &nbsp;&nbsp;&nbsp; • &nbsp;&nbsp;&nbsp;
+            MY FAVORITE ALBUMS &nbsp;&nbsp;&nbsp; • &nbsp;&nbsp;&nbsp;
+            MY FAVORITE ALBUMS &nbsp;&nbsp;&nbsp; • &nbsp;&nbsp;&nbsp;
+            MY FAVORITE ALBUMS &nbsp;&nbsp;&nbsp; • &nbsp;&nbsp;&nbsp;
+            MY FAVORITE ALBUMS &nbsp;&nbsp;&nbsp; • &nbsp;&nbsp;&nbsp;
+            MY FAVORITE ALBUMS &nbsp;&nbsp;&nbsp; • &nbsp;&nbsp;&nbsp;
+            MY FAVORITE ALBUMS &nbsp;&nbsp;&nbsp; • &nbsp;&nbsp;&nbsp;
+            MY FAVORITE ALBUMS &nbsp;&nbsp;&nbsp; • &nbsp;&nbsp;&nbsp;
+        </span>
+
+    </div>
+</div>
+<div class="album-section">
+
+    <button class="album-arrow left" onclick="scrollAlbums(-1)">‹</button>
+    <div class="album-covers">
+    <div class="album">
+        <img src="Titanic_Rising.jpg">
+        <p>Titanic Rising, Weyes Blood</p>
+    </div>
+    <div class="album">
+        <img src="PB_Punisher.png">
+        <p>Punisher, Phoebe Bridgers</p>
+    </div>
+    <div class="album">
+        <img src="StageGirl.jpeg">
+        <p>Stage Girl, Eli</p>
+    </div>
+    <div class="album">
+        <img src="ScottJames.jpg">
+        <p>Shelter Island Heights, Scott James</p>
+    </div>
+    <div class="album"> 
+    <img src="Igor_-_Tyler,_the_Creator.jpg">
+    <p>IGOR, Tyler, The Creator</p> 
+    </div>
+    <div class="album">
+            <img src="elmiene.jpeg">
+            <p>Sounds For Someone, Elmiene</p>
+        </div>
+    <div class="album">
+        <img src="twen_oss.jpg">
+            <p>One Stop Shop, Twen</p>
+             </div>
+    <div class="album">
+        <img src="Currents.jpg">
+        <p>Currents, Tame Impala</p>
+        </div>
+    <div class="album">
+        <img src="ZepIV.jpg">
+        <p>Led Zeppelin IV, Led Zeppelin</p>
+        </div>
+</div>
+    <button class="album-arrow right" onclick="scrollAlbums(1)">›</button>
+</div>
+
+<div class="description">
+    <div class="text">
+        <h1>GOOD SOUNDS!</h1>
+
+        <p>As someone who grew up exposed to music through playing multiple instruments, singing, and having musical family members, I've always been surrounded by music. It's been an outlet for me to de-stress through picking up a guitar to putting a playlist on shuffle. I have no specific ranking of these albums, these are just some I like! I listen to all different kinds of genres so a lot of these artists are scattered all over the place. Some of them I've seen live, some of them I haven't, but they're all great artists!</p>
+        
+        <a href="https://open.spotify.com/user/k3fndnevokfqt6johqi3llga6?si=4312ef4f4d3541fa" class="listen-button">LISTEN WITH ME</a>
+        
+    </div>
+    <div class="image-feature">
+        <img src="heatthestreets.jpeg">
+
+        <p class="caption">
+                EMMA'S SONG OF THE SUMMER
+        </p>
+
+        <p class="photo-text">
+            "Miss Hot July," Elmiene
+        </p>
+    </div>
+</div>
+<div class="next-thing">
+    
+    <div class="sound-wave" id="soundWave"></div>
+</div>
+
+        
+        
+        <script>
+function scrollAlbums(direction) {
+    const albums = document.querySelector('.album-covers');
+
+    albums.scrollBy({
+        left: direction * 530,
+        behavior: 'smooth'
+    });
+}
+            window.addEventListener("scroll", function() {
+    const scroll = window.scrollY;
+    const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+    const progress = scroll / maxScroll;
+
+    const start = [178, 202, 233];
+    const end = [231, 169, 143];
+
+    const r = start[0] + (end[0] - start[0]) * progress;
+    const g = start[1] + (end[1] - start[1]) * progress;
+    const b = start[2] + (end[2] - start[2]) * progress;
+
+    document.body.style.backgroundColor =
+        `rgb(${r}, ${g}, ${b})`;
+});
+
+            const wave = document.getElementById("soundWave");
+
+for (let i = 0; i < 100; i++) {
+    const bar = document.createElement("div");
+    bar.className = "bar";
+    wave.appendChild(bar);
+}
+
+wave.addEventListener("mousemove", function(e) {
+    const bars = document.querySelectorAll(".bar");
+    const rect = wave.getBoundingClientRect();
+    const mouseX = e.clientX - rect.left;
+
+    bars.forEach((bar, i) => {
+        const barX = (i / bars.length) * rect.width;
+        const distance = Math.abs(mouseX - barX);
+
+        // Wider, softer area of interaction
+        const influence = Math.max(0, 1 - distance / 220);
+
+        // Lower maximum height
+        const height = 40 + influence * 110;
+
+        bar.style.height = height + "px";
+    });
+});
+
+wave.addEventListener("mouseleave", function() {
+    document.querySelectorAll(".bar").forEach(bar => {
+        bar.style.height = "40px";
+    });
+});
+</script>
+    
+</body>
+</html>
